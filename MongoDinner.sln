@@ -1,11 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
+# SharpDevelop 3.1.0.4890
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1E6781E7-E597-41A7-884E-3A6865D73DB5}"
+	ProjectSection(SolutionItems) = postProject
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDinner.Tests", "MongoDinner.Tests\MongoDinner.Tests.csproj", "{9EB186A2-DCA6-4986-BC42-47644645CF68}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDinner", "MongoDinner\MongoDinner.csproj", "{09814ABD-2385-4D9D-BE7E-F98033AD607D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Web", "MongoDB.Web\MongoDB.Web.csproj", "{07133006-2964-4780-9024-536231AFCD49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDB.Web.Tests", "MongoDB.Web.Tests\MongoDB.Web.Tests.csproj", "{D15E704F-253E-4B43-ACD3-C2845086113E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +33,18 @@ Global
 		{09814ABD-2385-4D9D-BE7E-F98033AD607D}.Default|Any CPU.Build.0 = Debug|Any CPU
 		{09814ABD-2385-4D9D-BE7E-F98033AD607D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09814ABD-2385-4D9D-BE7E-F98033AD607D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07133006-2964-4780-9024-536231AFCD49}.Debug|Any CPU.Build.0 = Debug|x86
+		{07133006-2964-4780-9024-536231AFCD49}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{07133006-2964-4780-9024-536231AFCD49}.Default|Any CPU.Build.0 = Debug|x86
+		{07133006-2964-4780-9024-536231AFCD49}.Default|Any CPU.ActiveCfg = Debug|x86
+		{07133006-2964-4780-9024-536231AFCD49}.Release|Any CPU.Build.0 = Release|x86
+		{07133006-2964-4780-9024-536231AFCD49}.Release|Any CPU.ActiveCfg = Release|x86
+		{D15E704F-253E-4B43-ACD3-C2845086113E}.Debug|Any CPU.Build.0 = Debug|x86
+		{D15E704F-253E-4B43-ACD3-C2845086113E}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D15E704F-253E-4B43-ACD3-C2845086113E}.Default|Any CPU.Build.0 = Debug|x86
+		{D15E704F-253E-4B43-ACD3-C2845086113E}.Default|Any CPU.ActiveCfg = Debug|x86
+		{D15E704F-253E-4B43-ACD3-C2845086113E}.Release|Any CPU.Build.0 = Release|x86
+		{D15E704F-253E-4B43-ACD3-C2845086113E}.Release|Any CPU.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
