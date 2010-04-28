@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NerdDinner.Models;
+using MongoDinner.Models;
 
-namespace NerdDinner.Tests.Fakes {
+namespace MongoDinner.Tests.Fakes {
 
     public class FakeDinnerRepository : IDinnerRepository {
 

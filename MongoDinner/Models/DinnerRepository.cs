@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace NerdDinner.Models {
+namespace MongoDinner.Models {
 
-    public class DinnerRepository : NerdDinner.Models.IDinnerRepository {
+    public class DinnerRepository : MongoDinner.Models.IDinnerRepository {
 
         NerdDinnerDataContext db = new NerdDinnerDataContext();
 

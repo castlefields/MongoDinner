@@ -1,31 +1,36 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDinner", "NerdDinner\MongoDinner.csproj", "{328C148C-DBEE-41A4-B1C7-104CBB216556}"
-EndProject
-Project("{9344bdbb-3e7f-41fc-a0dd-8665d75ee146}") = "NerdDinner.Tests", "NerdDinner.Tests\NerdDinner.Tests.csproj", "{736BC0A7-A6DC-4883-AA13-11B1016A15EA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1E6781E7-E597-41A7-884E-3A6865D73DB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDinner.Tests", "MongoDinner.Tests\MongoDinner.Tests.csproj", "{9EB186A2-DCA6-4986-BC42-47644645CF68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDinner", "MongoDinner\MongoDinner.csproj", "{09814ABD-2385-4D9D-BE7E-F98033AD607D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Default|Any CPU = Default|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{328C148C-DBEE-41A4-B1C7-104CBB216556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{328C148C-DBEE-41A4-B1C7-104CBB216556}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{328C148C-DBEE-41A4-B1C7-104CBB216556}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{328C148C-DBEE-41A4-B1C7-104CBB216556}.Release|Any CPU.Build.0 = Release|Any CPU
-		{736BC0A7-A6DC-4883-AA13-11B1016A15EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{736BC0A7-A6DC-4883-AA13-11B1016A15EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = NerdDinner\MongoDinner.csproj
+		{9EB186A2-DCA6-4986-BC42-47644645CF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB186A2-DCA6-4986-BC42-47644645CF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB186A2-DCA6-4986-BC42-47644645CF68}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB186A2-DCA6-4986-BC42-47644645CF68}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{9EB186A2-DCA6-4986-BC42-47644645CF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB186A2-DCA6-4986-BC42-47644645CF68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09814ABD-2385-4D9D-BE7E-F98033AD607D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09814ABD-2385-4D9D-BE7E-F98033AD607D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09814ABD-2385-4D9D-BE7E-F98033AD607D}.Default|Any CPU.ActiveCfg = Debug|Any CPU
+		{09814ABD-2385-4D9D-BE7E-F98033AD607D}.Default|Any CPU.Build.0 = Debug|Any CPU
+		{09814ABD-2385-4D9D-BE7E-F98033AD607D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09814ABD-2385-4D9D-BE7E-F98033AD607D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = MongoDinner\MongoDinner.csproj
 	EndGlobalSection
 EndGlobal

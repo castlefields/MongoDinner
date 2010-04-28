@@ -1,16 +1,19 @@
-﻿using System;
+using System;
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NerdDinner.Models;
 
-namespace NerdDinner.Tests.Models {
+using NUnit.Framework;
 
-    [TestClass]
+
+using MongoDinner.Models;
+
+namespace MongoDinner.Tests.Models {
+
+    [TestFixture]
     public class DinnerTest {
 
-        [TestMethod]
+        [Test]
         public void Dinner_Should_Not_Be_Valid_When_Some_Properties_Incorrect() {
 
             //Arrange
@@ -27,7 +30,7 @@ namespace NerdDinner.Tests.Models {
             Assert.IsFalse(isValid);
         }
 
-        [TestMethod]
+        [Test]
         public void Dinner_Should_Be_Valid_When_All_Properties_Correct() {
             
             //Arrange

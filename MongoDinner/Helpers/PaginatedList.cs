@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NerdDinner.Helpers { 
+namespace MongoDinner.Helpers { 
 
     public class PaginatedList<T> : List<T> {
 

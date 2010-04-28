@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using NerdDinner.Helpers;
-using NerdDinner.Models;
+using MongoDinner.Helpers;
+using MongoDinner.Models;
 
-namespace NerdDinner.Controllers {
+namespace MongoDinner.Controllers {
 
     //
     // ViewModel Classes

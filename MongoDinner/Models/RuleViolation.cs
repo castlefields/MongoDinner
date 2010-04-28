@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace NerdDinner.Models {
+namespace MongoDinner.Models {
 
     public class RuleViolation {
 

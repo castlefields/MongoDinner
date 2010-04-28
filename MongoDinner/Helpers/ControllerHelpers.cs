@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using NerdDinner.Models;
+using MongoDinner.Models;
 using System.Web.Mvc;
 
-namespace NerdDinner.Helpers {
+namespace MongoDinner.Helpers {
 
     public static class ModelStateHelpers {
 

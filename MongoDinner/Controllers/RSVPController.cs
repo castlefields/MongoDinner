@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using NerdDinner.Models;
+using MongoDinner.Models;
 
-namespace NerdDinner.Controllers
+namespace MongoDinner.Controllers
 {
     public class RSVPController : Controller {
 

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Data.Linq;
 using System.Web.Mvc;
-using NerdDinner.Helpers;
+using MongoDinner.Helpers;
 
-namespace NerdDinner.Models {
+namespace MongoDinner.Models {
 
     [Bind(Include="Title,Description,EventDate,Address,Country,ContactPhone,Latitude,Longitude")]
     public partial class Dinner {

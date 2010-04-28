@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace NerdDinner.Models {
+namespace MongoDinner.Models {
 
     public interface IDinnerRepository {
 

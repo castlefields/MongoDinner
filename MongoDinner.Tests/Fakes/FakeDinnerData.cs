@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NerdDinner.Models;
+using MongoDinner.Models;
 using System.Web.Mvc;
 
-namespace NerdDinner.Tests.Fakes
+namespace MongoDinner.Tests.Fakes
 {
     class FakeDinnerData
     {

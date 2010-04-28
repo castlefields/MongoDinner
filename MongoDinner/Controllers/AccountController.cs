@@ -8,7 +8,7 @@ using System.Web.Mvc;
 using System.Web.Security;
 using System.Web.UI;
 
-namespace NerdDinner.Controllers {
+namespace MongoDinner.Controllers {
 
     [HandleError]
     public class AccountController : Controller {
