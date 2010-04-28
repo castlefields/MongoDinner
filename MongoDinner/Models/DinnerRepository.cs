@@ -2,18 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Configuration;
+using MongoDB.Serialization;
+using MongoDB.Configuration;
+using MongoDB.Connections;
+using MongoDB;
+using MongoDB.Linq;
 
 namespace MongoDinner.Models {
 
     public class DinnerRepository : MongoDinner.Models.IDinnerRepository {
 
-        NerdDinnerDataContext db = new NerdDinnerDataContext();
+        //NerdDinnerDataContext db = new NerdDinnerDataContext();
+        static MongoConfiguration config = (MongoConfiguration)System.Configuration.ConfigurationManager.GetSection("Mongo");
+        //static Connection conn = ConnectionFactory.GetConnection(config.ConnectionString);
+        static IMongoDatabase db = new MongoDatabase(config.ConnectionString);
+        static IMongoCollection<Dinner> dinners = db.GetCollection<Dinner>("dinners");
+
 
         //
         // Query Methods
 
-        public IQueryable<Dinner> FindAllDinners() {
-            return db.Dinners;
+        public IQueryable FindAllDinners() {
+      
+                return dinners.Linq<Dinner>();           
         }
 
         public IQueryable<Dinner> FindUpcomingDinners() {
