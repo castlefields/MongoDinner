@@ -11,16 +11,16 @@ namespace MongoDinner.Models
     {
         public Location() { }
 
-        public Location(double longitude, double latitude)
+        public Location(float longitude, float latitude)
         {
             this.Longitude = longitude;
             this.Latitude = latitude;
         }
 
         [MongoAlias("long")]
-        public double Longitude { get; set; }
+        public float Longitude { get; set; }
 
         [MongoAlias("lat")]
-        public double Latitude { get; set; }
+        public float Latitude { get; set; }
     }
 }
