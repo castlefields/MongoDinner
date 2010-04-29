@@ -28,11 +28,13 @@ namespace MongoDB.Web.Security
         [TestFixtureSetUp]
         public void Setup(){
             try{
-                foreach(var o in Membership.Providers){
-                    MembershipProvider p = o as MembershipProvider;
-                    Console.WriteLine(p.Name);
-                }
-                provider = (MongoDBMembershipProvider)Membership.Provider;
+//                foreach(var o in Membership.Providers){
+//                    MembershipProvider p = o as MembershipProvider;
+//                    Console.WriteLine(p.Name);
+//                }
+                provider =  new MongoDBMembershipProvider();
+                provider.Initialize("MongoDBMembershipProvider", new NameValueCollection(){{"applicationName", "providertests"}});
+                
                 mongo = new Mongo();
                 mongo.Connect();
                 membership = mongo["providertests"]["membership"];
