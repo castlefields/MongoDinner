@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Specialized;
 using System.Configuration;
 using System.Web.Security;
@@ -27,11 +27,19 @@ namespace MongoDB.Web.Security
         
         [TestFixtureSetUp]
         public void Setup(){
-            provider = (MongoDBMembershipProvider)Membership.Provider;
-            mongo = new Mongo();
-            mongo.Connect();
-            membership = mongo["providertests"]["membership"];
-            
+            try{
+                foreach(var o in Membership.Providers){
+                    MembershipProvider p = o as MembershipProvider;
+                    Console.WriteLine(p.Name);
+                }
+                provider = (MongoDBMembershipProvider)Membership.Provider;
+                mongo = new Mongo();
+                mongo.Connect();
+                membership = mongo["providertests"]["membership"];
+            }catch(Exception e){
+                Console.WriteLine(e.Message);
+                throw e;
+            }
             CleanUp();
         }
         
