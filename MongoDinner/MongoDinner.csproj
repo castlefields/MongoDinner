@@ -106,28 +106,17 @@
     <Compile Include="Helpers\ControllerHelpers.cs" />
     <Compile Include="Helpers\PaginatedList.cs" />
     <Compile Include="Helpers\PhoneValidator.cs" />
-    <Compile Include="Models\Dinner.cs" />
+    <Compile Include="Models\Dinner.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\DinnerRepository.cs" />
     <Compile Include="Models\IDinnerRepository.cs" />
-    <Compile Include="Models\NerdDinner1.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NerdDinner.dbml</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\RSVP.cs" />
     <Compile Include="Models\RuleViolation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Models\NerdDinner.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>NerdDinner1.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Models\NerdDinner.dbml.layout">
-      <DependentUpon>NerdDinner.dbml</DependentUpon>
-    </None>
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.2.6-vsdoc.js" />
     <Content Include="Scripts\jquery-1.2.6.js" />
