@@ -23,7 +23,7 @@ namespace MongoDinner.Models {
         //
         // Query Methods
 
-        public IQueryable FindAllDinners() {
+        public IQueryable<Dinner> FindAllDinners() {
       
                 return dinners.Linq<Dinner>();           
         }
@@ -36,35 +36,40 @@ namespace MongoDinner.Models {
         }
 
         public IQueryable<Dinner> FindByLocation(float latitude, float longitude) {
-            var dinners = from dinner in FindUpcomingDinners()
-                          join i in db.NearestDinners(latitude, longitude) 
-                          on dinner.DinnerID equals i.DinnerID
-                          select dinner;
+            //var dinners = from dinner in FindUpcomingDinners()
+            //              join i in db.NearestDinners(latitude, longitude) 
+            //              on dinner.DinnerID equals i.DinnerID
+            //              select dinner;
 
-            return dinners;
+            //return dinners;
+            throw new NotImplementedException();
         }
 
-        public Dinner GetDinner(int id) {
-            return db.Dinners.SingleOrDefault(d => d.DinnerID == id);
+        public Dinner GetDinner(Oid id) {
+            //return db.Dinners.SingleOrDefault(d => d.DinnerID == id);
+            return dinners.FindOne<Dinner>(d => d.DinnerID == id);
         }
 
         //
         // Insert/Delete Methods
 
         public void Add(Dinner dinner) {
-            db.Dinners.InsertOnSubmit(dinner);
+            //db.Dinners.InsertOnSubmit(dinner);
+            dinners.Insert(dinner);
         }
 
         public void Delete(Dinner dinner) {
-            db.RSVPs.DeleteAllOnSubmit(dinner.RSVPs);
-            db.Dinners.DeleteOnSubmit(dinner);
+            //db.RSVPs.DeleteAllOnSubmit(dinner.RSVPs);
+            //db.Dinners.DeleteOnSubmit(dinner);
+            dinners.Delete(dinner);
         }
 
         //
         // Persistence 
 
         public void Save() {
-            db.SubmitChanges();
+            //db.SubmitChanges();
+            throw new NotImplementedException();
         }
     }
 }
