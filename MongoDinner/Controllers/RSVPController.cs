@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MongoDinner.Models;
+using MongoDB;
 
 namespace MongoDinner.Controllers
 {
@@ -26,7 +27,7 @@ namespace MongoDinner.Controllers
         // AJAX: /Dinners/Register/1
 
         [Authorize, AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Register(int id) {
+        public ActionResult Register(Oid id) {
 
             Dinner dinner = dinnerRepository.GetDinner(id);
 

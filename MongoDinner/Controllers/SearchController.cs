@@ -4,11 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MongoDinner.Models;
+using MongoDB;
 
 namespace MongoDinner.Controllers {
 
     public class JsonDinner {
-        public int      DinnerID    { get; set; }
+        public Oid      DinnerID    { get; set; }
         public string   Title       { get; set; }
         public double   Latitude    { get; set; }
         public double   Longitude   { get; set; }
@@ -42,8 +43,8 @@ namespace MongoDinner.Controllers {
             var jsonDinners = from dinner in dinners
                               select new JsonDinner {
                                   DinnerID = dinner.DinnerID,
-                                  Latitude = dinner.Latitude,
-                                  Longitude = dinner.Longitude,
+                                  Latitude = dinner.Location.Latitude,
+                                  Longitude = dinner.Location.Longitude,
                                   Title = dinner.Title,
                                   Description = dinner.Description,
                                   RSVPCount = dinner.RSVPs.Count

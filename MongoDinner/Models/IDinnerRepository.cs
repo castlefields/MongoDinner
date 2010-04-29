@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using MongoDB;
 
 namespace MongoDinner.Models {
 
@@ -8,7 +9,7 @@ namespace MongoDinner.Models {
         IQueryable<Dinner> FindAllDinners();
         IQueryable<Dinner> FindByLocation(float latitude, float longitude);
         IQueryable<Dinner> FindUpcomingDinners();
-        Dinner GetDinner(int id);
+        Dinner GetDinner(Oid id);
 
         void Add(Dinner dinner);
         void Delete(Dinner dinner);

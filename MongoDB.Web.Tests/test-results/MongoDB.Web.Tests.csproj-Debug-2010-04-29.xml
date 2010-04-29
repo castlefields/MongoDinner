@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results />
+  <Tests>
+    <TestRecord Name="MongoDB">
+      <Results />
+      <Tests>
+        <TestRecord Name="Web">
+          <Results />
+          <Tests>
+            <TestRecord Name="Security">
+              <Results />
+              <Tests>
+                <TestRecord Name="MongoDBMembershipProviderTests">
+                  <Results />
+                  <Tests>
+                    <TestRecord Name="CreateAUser">
+                      <Results>
+                        <UnitTestResult>
+                          <TestDate>2010-04-29T00:03:06</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>1</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>TestFixtureSetUp failed in MongoDBMembershipProviderTests</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                        <UnitTestResult>
+                          <TestDate>2010-04-29T00:09:31</TestDate>
+                          <Status>Failure</Status>
+                          <TotalFailures>1</TotalFailures>
+                          <TotalSuccess>0</TotalSuccess>
+                          <TotalIgnored>0</TotalIgnored>
+                          <Time />
+                          <Message>TestFixtureSetUp failed in MongoDBMembershipProviderTests</Message>
+                          <ConsoleOutput />
+                          <ConsoleError />
+                        </UnitTestResult>
+                      </Results>
+                      <Tests />
+                    </TestRecord>
+                  </Tests>
+                </TestRecord>
+              </Tests>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>

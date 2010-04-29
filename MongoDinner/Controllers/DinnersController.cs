@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web.Mvc;
 using MongoDinner.Helpers;
 using MongoDinner.Models;
+using MongoDB;
 
 namespace MongoDinner.Controllers {
 
@@ -59,7 +60,7 @@ namespace MongoDinner.Controllers {
         //
         // GET: /Dinners/Details/5
 
-        public ActionResult Details(int id) {
+        public ActionResult Details(Oid id) {
 
             Dinner dinner = dinnerRepository.GetDinner(id);
 
@@ -73,7 +74,7 @@ namespace MongoDinner.Controllers {
         // GET: /Dinners/Edit/5
 
         [Authorize]
-        public ActionResult Edit(int id) {
+        public ActionResult Edit(Oid id) {
 
             Dinner dinner = dinnerRepository.GetDinner(id);
 
@@ -87,7 +88,7 @@ namespace MongoDinner.Controllers {
         // POST: /Dinners/Edit/5
 
         [AcceptVerbs(HttpVerbs.Post), Authorize]
-        public ActionResult Edit(int id, FormCollection collection) {
+        public ActionResult Edit(Oid id, FormCollection collection) {
 
             Dinner dinner = dinnerRepository.GetDinner(id);
 
@@ -153,7 +154,7 @@ namespace MongoDinner.Controllers {
         // HTTP GET: /Dinners/Delete/1
 
         [Authorize]
-        public ActionResult Delete(int id) {
+        public ActionResult Delete(Oid id) {
 
             Dinner dinner = dinnerRepository.GetDinner(id);
 
@@ -170,7 +171,7 @@ namespace MongoDinner.Controllers {
         // HTTP POST: /Dinners/Delete/1
 
         [AcceptVerbs(HttpVerbs.Post), Authorize]
-        public ActionResult Delete(int id, string confirmButton) {
+        public ActionResult Delete(Oid id, string confirmButton) {
 
             Dinner dinner = dinnerRepository.GetDinner(id);
 

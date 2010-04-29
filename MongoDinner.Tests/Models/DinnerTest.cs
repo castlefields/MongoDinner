@@ -32,7 +32,12 @@ namespace MongoDinner.Tests.Models {
 
         [Test]
         public void Dinner_Should_Be_Valid_When_All_Properties_Correct() {
-            
+
+            Location location = new Location
+            {
+                Latitude = 93,
+                Longitude = -92
+            };
             //Arrange
             Dinner dinner = new Dinner {
                 Title = "Test title",
@@ -42,8 +47,7 @@ namespace MongoDinner.Tests.Models {
                 Address = "One Microsoft Way",
                 Country = "USA",
                 ContactPhone = "425-703-8072",
-                Latitude = 93,
-                Longitude = -92,
+                Location = location
             };
 
             // Act

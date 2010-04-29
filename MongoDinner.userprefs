@@ -1,0 +1,44 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="MongoDB.Web.Tests/App.config" ctype="Workbench">
+    <Files>
+      <File FileName="MongoDB.Web.Tests/Security/MongoDBMembershipProviderTests.cs" Line="32" Column="68" />
+      <File FileName="MongoDB.Web.Tests/App.config" Line="3" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="MongoDB.Web" expanded="True">
+            <Node name="Security" expanded="True" />
+          </Node>
+          <Node name="MongoDB.Web.Tests" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="Security" expanded="True" />
+            <Node name="App.config" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True">
+          <Node name="MongoDB.Web.Tests" expanded="True">
+            <Node name="MongoDB" expanded="True">
+              <Node name="Web" expanded="True">
+                <Node name="Security" expanded="True">
+                  <Node name="MongoDBMembershipProviderTests" expanded="True">
+                    <Node name="CreateAUser" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

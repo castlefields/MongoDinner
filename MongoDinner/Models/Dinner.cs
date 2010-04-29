@@ -4,21 +4,55 @@ using System.Linq;
 using System.Data.Linq;
 using System.Web.Mvc;
 using MongoDinner.Helpers;
+using MongoDB;
+using MongoDB.Attributes;
 
 namespace MongoDinner.Models {
 
-    [Bind(Include="Title,Description,EventDate,Address,Country,ContactPhone,Latitude,Longitude")]
-    public partial class Dinner {
+    public class Dinner
+    {
+        [MongoAlias("_id")]
+        public Oid DinnerID { get; set; }
 
-        public bool IsHostedBy(string userName) {
+        [MongoAlias("title")]
+        public string Title {get; set;}
+
+        [MongoAlias("event_date")]
+        public DateTime EventDate { get; set; }
+
+        [MongoAlias("description")]
+        public string Description { get; set; }
+
+        [MongoAlias("hosted_by")]
+        public string HostedBy { get; set; }
+
+        [MongoAlias("contact_phone")]
+        public string ContactPhone { get; set; }
+
+        [MongoAlias("address")]
+        public string Address { get; set; }
+
+        [MongoAlias("country")]
+        public string Country { get; set; }
+
+        [MongoAlias("loc")]
+        public Location Location { get; set; }
+
+        [MongoAlias("rsvp")]
+        public List<RSVP> RSVPs { get; set; }
+
+        public bool IsHostedBy(string userName)
+        {
             return HostedBy.Equals(userName, StringComparison.InvariantCultureIgnoreCase);
         }
 
-        public bool IsUserRegistered(string userName) {
+        public bool IsUserRegistered(string userName)
+        {
             return RSVPs.Any(r => r.AttendeeName.Equals(userName, StringComparison.InvariantCultureIgnoreCase));
         }
 
-        public bool IsValid {
+        public bool IsValid
+        {
             get { return (GetRuleViolations().Count() == 0); }
         }
 
@@ -48,7 +82,7 @@ namespace MongoDinner.Models {
             yield break;
         }
 
-        partial void OnValidate(ChangeAction action) {
+        public void OnValidate(ChangeAction action) {
             if (!IsValid)
                 throw new ApplicationException("Rule violations prevent saving");
         }
