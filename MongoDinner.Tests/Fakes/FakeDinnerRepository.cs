@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MongoDinner.Models;
+using MongoDB;
 
 namespace MongoDinner.Tests.Fakes {
 
@@ -26,11 +27,11 @@ namespace MongoDinner.Tests.Fakes {
 
         public IQueryable<Dinner> FindByLocation(float lat, float lon) {
             return (from dinner in dinnerList
-                    where dinner.Latitude == lat && dinner.Longitude == lon
+                    where dinner.Location.Latitude == lat && dinner.Location.Longitude == lon
                     select dinner).AsQueryable();
         }
 
-        public Dinner GetDinner(int id) {
+        public Dinner GetDinner(Oid id) {
             return dinnerList.SingleOrDefault(d => d.DinnerID == id);
         }
 

@@ -46,7 +46,7 @@ namespace MongoDinner.Tests.Controllers {
             var controller = CreateRSVPControllerAs("scottha");
 
             // Act
-            var result = controller.Register(1);
+            //var result = controller.Register(1);
 
             // Assert
             //Assert.IsInstanceOfType(result, typeof(ContentResult));
