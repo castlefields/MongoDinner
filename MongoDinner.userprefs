@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" ctype="Workspace" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="MongoDB.Web.Tests/App.config" ctype="Workbench">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MongoDB.Web.Tests/Security/MongoDBMembershipProviderTests.cs" ctype="Workbench">
     <Files>
-      <File FileName="MongoDB.Web.Tests/Security/MongoDBMembershipProviderTests.cs" Line="32" Column="68" />
-      <File FileName="MongoDB.Web.Tests/App.config" Line="3" Column="2" />
+      <File FileName="MongoDB.Web.Tests/Security/MongoDBMembershipProviderTests.cs" Line="15" Column="10" />
+      <File FileName="MongoDB.Web.Tests/App.config" Line="12" Column="92" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,8 +13,13 @@
           </Node>
           <Node name="MongoDB.Web.Tests" expanded="True">
             <Node name="References" expanded="True" />
-            <Node name="Security" expanded="True" />
-            <Node name="App.config" selected="True" />
+            <Node name="Security" expanded="True">
+              <Node name="MongoDBMembershipProviderTests.cs" selected="True" />
+            </Node>
+          </Node>
+          <Node name="MongoDinner" expanded="True" />
+          <Node name="MongoDinner.Tests" expanded="True">
+            <Node name="References" expanded="True" />
           </Node>
         </State>
       </Pad>
