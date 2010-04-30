@@ -7,7 +7,8 @@ namespace MongoDB.Web.Security
 {
     public class MongoDBMembershipProvider: System.Web.Security.MembershipProvider
     {
-        private Mongo mongo;
+        public Mongo Mongo { get; private set; }
+
         private IMongoDatabase provider;
         private IMongoCollection<MongoDBMembershipUser> members;
 
@@ -36,12 +37,12 @@ namespace MongoDB.Web.Security
         {
             base.Initialize(name, config);
             this.ApplicationName = GetConfigValue(config["applicationName"], "aspprovider");
-            mongo = new Mongo();
-            mongo.Connect();
+            this.Mongo = new Mongo();
+            Mongo.Connect();
             
-            provider = mongo[this.ApplicationName];
+            provider = Mongo[this.ApplicationName];
             members = provider.GetCollection<MongoDBMembershipUser>("membership");
-            members.MetaData.CreateIndex(new Document("UserName", IndexOrder.Ascending), true);
+            members.MetaData.CreateIndex(new Document("Username", IndexOrder.Ascending), true);
             members.MetaData.CreateIndex(new Document("Email", IndexOrder.Ascending), false);
         }
         
@@ -81,7 +82,15 @@ namespace MongoDB.Web.Security
         
         public override bool DeleteUser(string username, bool deleteAllRelatedData)
         {
-            throw new NotImplementedException();
+            try
+            {
+                members.Delete(new { Username = username }, true);
+                return true;
+            }
+            catch (MongoException)
+            {
+                return false;
+            }
         }
 
         protected override byte[] EncryptPassword(byte[] password)
