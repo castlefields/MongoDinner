@@ -22,9 +22,20 @@ namespace MongoDB.Web.Security
             MembershipCreateStatus status;
             provider.CreateUser("test", "pass", "test@test", "test?", "test!", true, Oid.NewOid(), out status);
             Assert.AreEqual(MembershipCreateStatus.Success, status);
-            
+            Assert.AreEqual(1, membership.Count(new Document() { { "Username", "test" } }));            
         }
-        
+
+        [Test]
+        public void DeleteAUser()
+        {
+            var username = "testd";
+            MembershipCreateStatus status;
+            provider.CreateUser(username, "pass", "test@test", "test?", "test!", true, Oid.NewOid(), out status);
+            Assert.AreEqual(MembershipCreateStatus.Success, status);
+            Assert.AreEqual(1, membership.Count(new Document() { { "Username", username } }), "User not created");
+            provider.DeleteUser("testd", true);
+            Assert.AreEqual(0, membership.Count(new Document() { { "Username", username } }), "User not deleted");
+        }
         [TestFixtureSetUp]
         public void Setup(){
             try{
@@ -34,9 +45,8 @@ namespace MongoDB.Web.Security
 //                }
                 provider =  new MongoDBMembershipProvider();
                 provider.Initialize("MongoDBMembershipProvider", new NameValueCollection(){{"applicationName", "providertests"}});
-                
-                mongo = new Mongo();
-                mongo.Connect();
+
+                mongo = provider.Mongo;
                 membership = mongo["providertests"]["membership"];
             }catch(Exception e){
                 Console.WriteLine(e.Message);
