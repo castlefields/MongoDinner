@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using MongoDinner.Models;
 using System.Web.Mvc;
+using MongoDB;
 
 namespace MongoDinner.Tests.Fakes
 {
@@ -16,10 +17,11 @@ namespace MongoDinner.Tests.Fakes
 
             for (int i = 0; i < 101; i++)
             {
+                Location loc = new Location(-99, 99);
 
                 Dinner sampleDinner = new Dinner()
                 {
-                    DinnerID = i,
+                    DinnerID = Oid.NewOid(),
                     Title = "Sample Dinner",
                     HostedBy = "SomeUser",
                     Address = "Some Address",
@@ -27,8 +29,7 @@ namespace MongoDinner.Tests.Fakes
                     ContactPhone = "425-555-1212",
                     Description = "Some description",
                     EventDate = DateTime.Now.AddDays(i),
-                    Latitude = 99,
-                    Longitude = -99
+                    Location = loc
                 };
 
                 RSVP rsvp = new RSVP();
@@ -50,8 +51,8 @@ namespace MongoDinner.Tests.Fakes
             dinner.Description = "Desc";
             dinner.ContactPhone = "503-555-1212";
             dinner.HostedBy = "scottgu";
-            dinner.Latitude = 45;
-            dinner.Longitude = 45;
+            dinner.Location.Latitude = 45;
+            dinner.Location.Longitude = 45;
             dinner.Country = "USA";
             return dinner;
         }
